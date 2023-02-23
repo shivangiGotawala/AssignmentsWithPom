@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PracticeTestSuite" verbose="1" >
+    <test name="SanityTest">
+        <classes>
+            <class name="com.automation.test.LoginTest"/>
+            <class name="com.automation.test.HomeTest"/>
+        </classes>
+    </test>
+</suite>
