@@ -1,0 +1,14 @@
+{
+  "loginPage": {
+    "validUsername": "Admin",
+    "validPassword": "admin123",
+    "invalidUsername": "admin",
+    "invalidPassword": "admin"
+  },
+
+  "directoryPage": {
+    "firstname": "Paul",
+    "lastname": "Collings",
+    "empName": "odis"
+  }
+}

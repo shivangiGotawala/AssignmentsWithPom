@@ -148,11 +148,11 @@ public class BasePage {
         }
     }
 
-    public void typeInto(String locator, String contentToTypeProperty) {
+    public void typeInto(String locator, String contentToType) {
         try {
-            String txtToType = getValueFromTestDataPropertyFile(contentToTypeProperty);
-            getElement(locator).sendKeys(txtToType);
-            Reporter.testPassed("Method typeInto by locator [" + locator + "] and text [" + contentToTypeProperty + "] is performed successfully");
+//            String txtToType = getValueFromTestDataPropertyFile(contentToTypeProperty);
+            getElement(locator).sendKeys(contentToType);
+            Reporter.testPassed("Method typeInto by locator [" + locator + "] and text [" + contentToType + "] is performed successfully");
         } catch (Exception e) {
             Reporter.testFailed("Unable to type into [" + locator + "] property ");
         }

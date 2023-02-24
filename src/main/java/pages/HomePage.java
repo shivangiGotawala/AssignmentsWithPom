@@ -40,7 +40,9 @@ public class HomePage extends BasePage {
     public HomePage jobTitleFromDropDown(String locator) {
         WebElement ele = getElement(locator);
         ele.click();
-        ele.sendKeys("s");
+        ele.sendKeys("c");
+        ele.sendKeys(Keys.ARROW_DOWN);
+        ele.sendKeys(Keys.ARROW_DOWN);
         ele.sendKeys(Keys.ENTER);
         return this;
     }
@@ -48,21 +50,21 @@ public class HomePage extends BasePage {
     public HomePage locationFromDropDown(String locator) {
         WebElement ele = getElement(locator);
         ele.click();
-        ele.sendKeys("n");
+        ele.sendKeys("h");
         ele.sendKeys(Keys.ESCAPE);
         return this;
     }
 
-    public HomePage employeeFromDropDown(String locator) throws InterruptedException, AWTException {
+    public HomePage employeeFromDropDown(String locator,String textToType) throws InterruptedException, AWTException {
         WebElement ele = getElement(locator);
         ele.click();
-        ele.sendKeys("goutam");
+        ele.sendKeys(textToType);
         ele.sendKeys(Keys.SPACE);
         Thread.sleep(5000);
         ele.sendKeys(Keys.ARROW_DOWN);
         ele.sendKeys(Keys.ESCAPE);
-        System.out.println("employee :"+ ele.getAttribute("value"));
-        Assert.assertTrue(ele.getAttribute("value").equalsIgnoreCase("Goutam  Ganesh"));
+        System.out.println("employee :" + ele.getAttribute("value"));
+        Assert.assertTrue(ele.getAttribute("value").equalsIgnoreCase("odis  adalwin"));
         return this;
     }
 
@@ -72,9 +74,9 @@ public class HomePage extends BasePage {
         return this;
     }
 
-    public HomePage checkIfUsernameIsShowingCorrect(String firstnameLocator, String lastnameLocator){
-        Assert.assertTrue(getElement(firstnameLocator).getAttribute("value").equalsIgnoreCase("paul"));
-        Assert.assertTrue(getElement(lastnameLocator).getAttribute("value").equalsIgnoreCase("collings"));
+    public HomePage checkIfUsernameIsShowingCorrect(String locator, String name) {
+        System.out.println("checkIfUsernameIsShowingCorrect : "+name);
+        Assert.assertTrue(getElement(locator).getAttribute("value").equalsIgnoreCase(name));
         return this;
     }
 
