@@ -45,7 +45,7 @@ public class HomeTest extends BaseTest {
         homePage.findDirectoryFromSidePanel("homepage_sidePanel", "homepage_sidePanelFindLiForMyInfo")
                 .checkIfTitleDisplay("homepage_myInfoTitle")
                 .checkIfUsernameIsShowingCorrect("myinfoPage_txtFirstname", firstname)
-                .checkIfUsernameIsShowingCorrect("myinfoPage_txtFirstname", lastname)
+                .checkIfUsernameIsShowingCorrect("myinfoPage_txtLastname", lastname)
                 .logout("directoryPage_userOptions", "directoryPage_userLogout")
                 .checkIfTitleDisplay("loginpage_btnLogin");
     }
