@@ -55,7 +55,7 @@ public class HomePage extends BasePage {
         return this;
     }
 
-    public HomePage employeeFromDropDown(String locator,String textToType) throws InterruptedException, AWTException {
+    public HomePage employeeFromDropDown(String locator, String textToType) throws InterruptedException, AWTException {
         WebElement ele = getElement(locator);
         ele.click();
         ele.sendKeys(textToType);
@@ -75,8 +75,11 @@ public class HomePage extends BasePage {
     }
 
     public HomePage checkIfUsernameIsShowingCorrect(String locator, String name) {
-        System.out.println("checkIfUsernameIsShowingCorrect : "+name);
-        Assert.assertTrue(getElement(locator).getAttribute("value").equalsIgnoreCase(name));
+        System.out.println("checkIfUsernameIsShowingCorrect : " + name);
+        WebElement ele = getElement(locator);
+        String value = ele.getAttribute("value");
+        System.out.println("value:" + value);
+        Assert.assertTrue(value.equalsIgnoreCase(name));
         return this;
     }
 
