@@ -1,11 +1,20 @@
 {
+  "loginData": [
+    {
+      "username": "Admin",
+      "password": "admin123"
+    },
+    {
+      "username": "admin",
+      "password": "admin"
+    }
+  ],
   "loginPage": {
-    "validUsername": "Admin",
-    "validPassword": "admin123",
+    "username": "admin",
+    "password": "admin123",
     "invalidUsername": "admin",
     "invalidPassword": "admin"
   },
-
   "directoryPage": {
     "firstname": "Paul",
     "lastname": "Collings",

@@ -18,7 +18,6 @@ public class BaseTest {
     @BeforeSuite
     public void setUp() throws IOException, ParseException {
         ExtentReportManager.getReporter();
-        JsonUtils.loadJsonFile("testdata.json");
     }
 
     @BeforeMethod

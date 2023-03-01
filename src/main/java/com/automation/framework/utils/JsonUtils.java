@@ -1,5 +1,6 @@
 package com.automation.framework.utils;
 
+import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -23,7 +24,12 @@ public class JsonUtils {
         return (JSONObject) jsonObject.get(objName);
     }
 
-    public static String getValueFromObj(JSONObject jsonObj, String key) {
-        return jsonObj.get(key).toString();
+    public static JSONArray getJsonArray(JSONObject obj, String objName) {
+        return (JSONArray) jsonObject.get(objName);
     }
+
+    public static String getValueFromJsonObj(JSONObject obj, String value) {
+        return (String) obj.get(value);
+    }
+
 }
