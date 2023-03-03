@@ -10,6 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
@@ -101,11 +102,8 @@ public class BasePage {
         }
         return ele;
     }
-    public void waitForElementToBeAvailable(){
 
-    }
-
-    public Actions getAction (){
+    public Actions getAction() {
         return new Actions(driver);
     }
 
@@ -128,13 +126,13 @@ public class BasePage {
         return eleList;
     }
 
-    public WebElement getSingleElementFromList(String locator,String locatorFindFromList) {
+    public WebElement getSingleElementFromList(String locator, String locatorFindFromList) {
         List<WebElement> listOfSideMenus = getElements(locator);
         System.out.println("list :" + listOfSideMenus);
         WebElement element = null;
         for (int i = 0; i < listOfSideMenus.size(); i++) {
-             element = listOfSideMenus.get(i).findElement(findElement(locatorFindFromList));
-             break;
+            element = listOfSideMenus.get(i).findElement(findElement(locatorFindFromList));
+            break;
         }
         return element;
     }
@@ -150,12 +148,62 @@ public class BasePage {
 
     public void typeInto(String locator, String contentToType) {
         try {
-//            String txtToType = getValueFromTestDataPropertyFile(contentToTypeProperty);
             getElement(locator).sendKeys(contentToType);
             Reporter.testPassed("Method typeInto by locator [" + locator + "] and text [" + contentToType + "] is performed successfully");
         } catch (Exception e) {
             Reporter.testFailed("Unable to type into [" + locator + "] property ");
         }
+    }
+
+    public void selectBy(String locator, String by, String value) {
+        Select select = new Select(getElement(locator));
+        if (by.equalsIgnoreCase("value")) {
+            select.selectByValue(value);
+        }
+        if (by.equalsIgnoreCase("text")) {
+            select.selectByVisibleText(convertNumericalMonthToTextFormat(value));
+        }
+    }
+
+    public String convertNumericalMonthToTextFormat(String monthByNo) {
+        String month = "";
+        if (monthByNo.equalsIgnoreCase("01")) {
+            month = "January";
+        }
+        if (monthByNo.equalsIgnoreCase("02")) {
+            month = "February";
+        }
+        if (monthByNo.equalsIgnoreCase("03")) {
+            month = "March";
+        }
+        if (monthByNo.equalsIgnoreCase("04")) {
+            month = "April";
+        }
+        if (monthByNo.equalsIgnoreCase("05")) {
+            month = "May";
+        }
+        if (monthByNo.equalsIgnoreCase("06")) {
+            month = "June";
+        }
+        if (monthByNo.equalsIgnoreCase("07")) {
+            month = "July";
+        }
+        if (monthByNo.equalsIgnoreCase("08")) {
+            month = "August";
+        }
+        if (monthByNo.equalsIgnoreCase("09")) {
+            month = "September";
+        }
+        if (monthByNo.equalsIgnoreCase("10")) {
+            month = "October";
+        }
+        if (monthByNo.equalsIgnoreCase("11")) {
+            month = "November";
+        }
+        if (monthByNo.equalsIgnoreCase("12")) {
+            month = "December";
+        }
+        return month;
     }
 
     public String getValueFromTestDataPropertyFile(String propertyName) {

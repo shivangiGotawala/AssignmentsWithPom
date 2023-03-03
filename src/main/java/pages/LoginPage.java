@@ -15,10 +15,6 @@ public class LoginPage extends BasePage {
         this.driver = driver;
     }
 
-    public LoginPage launchApplication(String locator) {
-        launchURL(locator);
-        return this;
-    }
 
     public LoginPage enterUsername(String locatorName, String userNamePropertyName) {
         typeInto(locatorName, userNamePropertyName);

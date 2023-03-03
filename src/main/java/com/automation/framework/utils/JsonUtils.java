@@ -20,13 +20,14 @@ public class JsonUtils {
         jsonObject = (JSONObject) jsonParser.parse(new FileReader(filepath));
     }
 
-    public static JSONObject getObjFromJsonObj(JSONObject obj, String objName) {
-        return (JSONObject) jsonObject.get(objName);
+    public static JSONObject getJsonObject(String objName) {
+        return (JSONObject) jsonObject.get( objName);
     }
 
     public static JSONArray getJsonArray(JSONObject obj, String objName) {
         return (JSONArray) jsonObject.get(objName);
     }
+
 
     public static String getValueFromJsonObj(JSONObject obj, String value) {
         return (String) obj.get(value);

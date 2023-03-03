@@ -1,23 +1,27 @@
 {
+  "registrationData": {
+    "email": "rahul@abc.com",
+    "firstname": "pooja",
+    "lastname": "abc",
+    "password": "Testing@123",
+    "dob": "24-6-1990"
+  },
   "loginData": [
     {
-      "username": "Admin",
-      "password": "admin123"
+      "username": "hey@abc.com",
+      "password": "Testing@123"
     },
     {
-      "username": "admin",
-      "password": "admin"
+      "username": "hey@abc.com",
+      "password": "hey@abc.com"
+    },
+    {
+      "username": "hey@123.com",
+      "password": "Testing@123"
+    },
+    {
+      "username": "123@123.com",
+      "password": "123@123"
     }
-  ],
-  "loginPage": {
-    "username": "admin",
-    "password": "admin123",
-    "invalidUsername": "admin",
-    "invalidPassword": "admin"
-  },
-  "directoryPage": {
-    "firstname": "Paul",
-    "lastname": "Collings",
-    "empName": "odis"
-  }
+  ]
 }
