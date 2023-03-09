@@ -28,7 +28,6 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-
     }
 
     public static WebDriver launchBrowser(String browserTypeProperty) throws IOException {

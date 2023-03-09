@@ -26,7 +26,6 @@ public class RegistrationTest extends BaseTest {
                 .enterMonth("registrationPage_selectDobMonth", "value", birthday[1])
                 .enterYear("registrationPage_selectDobYear", "value", birthday[2])
                 .clickOnRegistration("registrationPage_btnRegister");
-
     }
 
 }

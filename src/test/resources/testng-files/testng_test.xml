@@ -2,6 +2,7 @@
 <suite name="PracticeTestSuite" verbose="1" >
     <test name="SanityTest">
         <classes>
+            <class name="com.automation.test.RegistrationTest"/>
             <class name="com.automation.test.LoginTest"/>
             <class name="com.automation.test.HomeTest"/>
         </classes>

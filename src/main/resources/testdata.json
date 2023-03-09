@@ -1,6 +1,6 @@
 {
   "registrationData": {
-    "email": "rahul@abc.com",
+    "email": "rahul1@abc.com",
     "firstname": "pooja",
     "lastname": "abc",
     "password": "Testing@123",
@@ -10,18 +10,6 @@
     {
       "username": "hey@abc.com",
       "password": "Testing@123"
-    },
-    {
-      "username": "hey@abc.com",
-      "password": "hey@abc.com"
-    },
-    {
-      "username": "hey@123.com",
-      "password": "Testing@123"
-    },
-    {
-      "username": "123@123.com",
-      "password": "123@123"
     }
   ]
 }
